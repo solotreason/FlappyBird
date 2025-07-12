@@ -3,6 +3,9 @@ import java.awt.event.KeyEvent;
 
 public class Tube {
 
+    private static final int START_X = 500;
+    private static final int SPEED = 2;
+
     public int x;
     public int y;
     public boolean currentEnnemy;
@@ -11,13 +14,13 @@ public class Tube {
     private Image image;
     
     public Tube () {
-        x=500;
+        x = START_X;
         y = 0;
         spawnedOneTube=0;
     }
 
     public void update () {
-        x = x-2;
+        x -= SPEED;
     }
 
     public Image getImage () {

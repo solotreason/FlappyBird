@@ -4,6 +4,9 @@ import java.awt.event.*;
 import java.util.ArrayList;
 public class GamePanel extends JPanel implements Runnable {
 
+    private static final int SPAWN_TRIGGER_X = 300;
+    private static final int REMOVE_X = -100;
+
     private Bird bird;
     private Game game;
     private ArrayList<Tube> tubes;
@@ -37,11 +40,11 @@ public class GamePanel extends JPanel implements Runnable {
         
         for (int i=0; i < tubes.size(); i++) {
             g.drawImage(tubes.get(i).getImage(), tubes.get(i).x, tubes.get(i).y, null);
-            if(tubes.get(i).spawnedOneTube==0 && tubes.get(i).x<300){
-                        tubes.add(new Tube());
-                        tubes.get(i).spawnedOneTube=1;
+            if (tubes.get(i).spawnedOneTube == 0 && tubes.get(i).x < SPAWN_TRIGGER_X) {
+                tubes.add(new Tube());
+                tubes.get(i).spawnedOneTube = 1;
             }
-            if(tubes.get(i).x<-100){
+            if (tubes.get(i).x < REMOVE_X) {
                 tubes.remove(i);
             }
         }

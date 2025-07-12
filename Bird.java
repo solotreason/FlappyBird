@@ -3,6 +3,9 @@ import java.awt.event.KeyEvent;
 
 public class Bird {
 
+    private static final int FLOOR_Y = 380;
+    private static final int JUMP_STRENGTH = -10;
+
     public int x;
     public int y;
     public int width;
@@ -10,7 +13,7 @@ public class Bird {
     public boolean collision;
     // y velocity
     public double yvel;
-    public double gravity;
+    public static final double GRAVITY = 0.6;
 
     // delay between key presses
     private int jumpDelay;
@@ -24,26 +27,26 @@ public class Bird {
         yvel = 0;
         width = 40;
         height = 40;
-        gravity = 0.6;
         jumpDelay = 0;
         collision = false;
         keyboard = Keyboard.getInstance();
     }
     private void checkCollision(){
         //System.out.println(y);
-        if(y > 380){
+        if (y >= FLOOR_Y) {
+            y = FLOOR_Y;
             collision = true;
         }
     }
 
     public void update () {
-        yvel += gravity;
+        yvel += GRAVITY;
 
         if (jumpDelay > 0)
             jumpDelay--;
 
         if (keyboard.isDown(KeyEvent.VK_SPACE) && jumpDelay <= 0) {
-            yvel = -10;
+            yvel = JUMP_STRENGTH;
             jumpDelay = 10;
         }
 
