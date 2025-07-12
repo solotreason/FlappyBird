@@ -10,4 +10,4 @@ I will add some comments and clean the code a bit.
 I will create a good ReadMe file
 Continue the project
 
-Main issue: Images doesn't seem to load every time .. it's kind of random we should find a fix for this.. 
+Main issue fixed: images now load reliably using classpath resource loading.
