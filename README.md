@@ -35,8 +35,7 @@ The code will be commented soon.. feel free to contribute in the project :)
 * Bird Movement
 
 ## Known issues:
-Often you have to run the game a couple of time before the images appear
--> Something is probably wrong with image buffering
+No major issues known.
 
 
 
