@@ -28,11 +28,11 @@ The code will be commented soon.. feel free to contribute in the project :)
 
 ## Current State Of The Project:
 
-### Things Done:
-* Collision with floor
-* Tubes Spawning
-* Tubes Movement
-* Bird Movement
+### Completed Features
+- [x] Collision with floor
+- [x] Tubes Spawning
+- [x] Tubes Movement
+- [x] Bird Movement
 
 ## Known issues:
 No major issues known.
