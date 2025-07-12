@@ -34,6 +34,9 @@ The code will be commented soon.. feel free to contribute in the project :)
 * Tubes Movement
 * Bird Movement
 
+Recent updates reintroduce floor collision detection and tube movement/spawning,
+ensuring gameplay behaves as expected.
+
 ## Known issues:
 No major issues known.
 
